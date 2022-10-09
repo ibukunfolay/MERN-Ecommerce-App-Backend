@@ -27,6 +27,9 @@ mongoose
 
 //middleware
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("connected");
+});
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 
